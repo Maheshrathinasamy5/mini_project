@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000000;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0073e6;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background: #005bb5;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://source.unsplash.com/1600x900/?technology,coding') no-repeat center;
+            background-size: cover;
+            color: rgb(255, 0, 0);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        /* Sections */
+        .container {
+            width: 80%;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 20px;
+            min-width: 120px;
+        }
+
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #0073e6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #005bb5;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .skills {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm Mahesh, A passionate developer crafting amazing experiences.</p>
+    </section>
+
+    <!-- About Me Section -->
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <p>I'm a software developer with a strong background in Java and web development. I enjoy building creative and efficient solutions.</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="container" id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">TypeScript</div>
+            <div class="skill-box">Angular</div>
+            <div class="skill-box">Java</div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="container" id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A web application built with Angular and TypeScript.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>An API service developed in Java and Spring Boot.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>A portfolio website showcasing my skills and projects.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container" id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 Mahesh | All Rights Reserved
+    </div>
+
+</body>
+</html>

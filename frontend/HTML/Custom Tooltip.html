@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Tooltip</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Tooltip Container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            color: #0073e6;
+        }
+
+        /* Tooltip Text */
+        .tooltip .tooltip-text {
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Tooltip Arrow (Triangle) */
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 8px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        /* Show Tooltip on Hover */
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>Hover over this <span class="tooltip">word
+        <span class="tooltip-text">Hi, This is Mahesh!</span>
+    </span> to see the tooltip effect.</p>
+
+</body>
+</html>

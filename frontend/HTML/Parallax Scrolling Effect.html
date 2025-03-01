@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #7997b5;
+        }
+
+        /* Parallax Section */
+        .parallax {
+            background-image: url('https://source.unsplash.com/1600x900/?nature,landscape'); /* Replace with your image */
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Content Section */
+        .content {
+            padding: 50px;
+            text-align: center;
+            background: white;
+            font-size: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Another Parallax Section */
+        .parallax-layer {
+            background-image: url('https://source.unsplash.com/1600x900/?mountains'); /* Replace with another image */
+            height: 70vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Parallax Section -->
+    <div class="parallax">Welcome to Parallax World</div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>What is Parallax Scrolling?</h2>
+        <p>Parallax scrolling is a web design technique where background images move slower than foreground content, creating an illusion of depth.</p>
+    </div>
+
+    <!-- Another Parallax Section -->
+    <div class="parallax-layer">Explore the Beauty of Nature</div>
+
+    <!-- Another Content Section -->
+    <div class="content">
+        <h2>Why Use Parallax?</h2>
+        <p>Parallax effects make websites look dynamic, engaging, and visually appealing. It helps enhance user experience and storytelling.</p>
+    </div>
+
+</body>
+</html>
